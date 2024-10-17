@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- ECO Type "Design" -->
+        <record id="eco_type_design" model="mrp.eco.type">
+            <field name="name">Product Design</field>
+        </record>
+        <!-- Stages of Design ECO Type -->
+        <record id="eco_stage_new" model="mrp.eco.stage">
+            <field name="name">New</field>
+            <field name="type_ids" eval="[(4, ref('material_request.eco_type_design'))]"/>
+            <field name="folded" eval="False"/>
+        </record>
+        <record id="eco_stage_design" model="mrp.eco.stage">
+            <field name="name">Design</field>
+            <field name="type_ids" eval="[(4, ref('material_request.eco_type_design'))]"/>
+            <field name="folded" eval="False"/>
+        </record>
+        <record id="eco_stage_validated" model="mrp.eco.stage">
+            <field name="name">Validated</field>
+            <field name="type_ids" eval="[(4, ref('material_request.eco_type_design'))]"/>
+            <field name="folded" eval="False"/>
+        </record>
+        <record id="eco_stage_done" model="mrp.eco.stage">
+            <field name="name">Done</field>
+            <field name="type_ids" eval="[(4, ref('material_request.eco_type_design'))]"/>
+            <field name="folded" eval="True"/>
+            <field name="final_stage" eval="True"/>
+        </record>
+        <record id="eco_stage_canceled" model="mrp.eco.stage">
+            <field name="name">Canceled</field>
+            <field name="type_ids" eval="[(4, ref('material_request.eco_type_design'))]"/>
+            <field name="folded" eval="True"/>
+        </record>
+    </data>
+</odoo>

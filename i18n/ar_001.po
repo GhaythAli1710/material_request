@@ -1,0 +1,540 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* material_requests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 14:01+0000\n"
+"PO-Revision-Date: 2024-09-26 14:01+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__action
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_search
+msgid "Action"
+msgstr "الإجراء"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: material_requests
+#: model:ir.actions.server,name:material_requests.action_approve_all
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Approve"
+msgstr "قبول"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__approved
+msgid "Approved"
+msgstr "مقبول"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: material_requests
+#: model:mrp.eco.stage,legend_blocked:material_requests.eco_stage_canceled
+#: model:mrp.eco.stage,legend_blocked:material_requests.eco_stage_design
+#: model:mrp.eco.stage,legend_blocked:material_requests.eco_stage_done
+#: model:mrp.eco.stage,legend_blocked:material_requests.eco_stage_new
+#: model:mrp.eco.stage,legend_blocked:material_requests.eco_stage_validated
+msgid "Blocked"
+msgstr "محجوب"
+
+#. module: material_requests
+#: model:mrp.eco.stage,name:material_requests.eco_stage_canceled
+msgid "Canceled"
+msgstr "تم الإلغاء "
+
+#. module: material_requests
+#: model:ir.module.category,description:material_requests.material_request_management
+msgid "Category For Material Request"
+msgstr "فئة طلب المادة"
+
+#. module: material_requests
+#: model:ir.actions.server,name:material_requests.action_confirm_all
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__create_uid
+msgid "Created by"
+msgstr "تم الإنشاء بواسطة"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__create_date
+msgid "Created on"
+msgstr "تم إنشاؤه في"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__action__design
+#: model:mrp.eco.stage,name:material_requests.eco_stage_design
+msgid "Design"
+msgstr "تصميم"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: material_requests
+#: model:ir.actions.server,name:material_requests.action_done_all
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__done
+#: model:mrp.eco.stage,name:material_requests.eco_stage_done
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Done"
+msgstr "تم"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+msgid "ECO"
+msgstr "أمر التغيير الهندسي"
+
+#. module: material_requests
+#: model:ir.model,name:material_requests.model_mrp_eco
+msgid "Engineering Change Order (ECO)"
+msgstr "أمر التغيير الهندسي (ECO) "
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "أيقونة من Font awesome مثال: fa-tasks "
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_search
+msgid "Group By"
+msgstr "تجميع بواسطة"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__has_message
+msgid "Has Message"
+msgstr "لديه رسالة"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة تشير الى نشاط إستثنائي."
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم التفعيل، يجب عليك الإنتباه للرسائل الجديدة."
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__message_has_error
+#: model:ir.model.fields,help:material_requests.field_material_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم التفعيل, بعض الرسائل ستعطي خطأ في التسليم."
+
+#. module: material_requests
+#: model:mrp.eco.stage,legend_normal:material_requests.eco_stage_canceled
+#: model:mrp.eco.stage,legend_normal:material_requests.eco_stage_design
+#: model:mrp.eco.stage,legend_normal:material_requests.eco_stage_done
+#: model:mrp.eco.stage,legend_normal:material_requests.eco_stage_new
+#: model:mrp.eco.stage,legend_normal:material_requests.eco_stage_validated
+msgid "In Progress"
+msgstr "قيد التنفيذ"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__action__manufacture
+msgid "Manufacture"
+msgstr "تصنيع"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__manufacturing_order_id
+msgid "Manufacturing Order"
+msgstr "أمر التصنيع"
+
+#. module: material_requests
+#: model:ir.model,name:material_requests.model_material_request
+#: model:ir.model.fields,field_description:material_requests.field_mrp_eco__material_request_id
+#: model:ir.model.fields,field_description:material_requests.field_mrp_production__material_request_id
+#: model_terms:ir.ui.view,arch_db:material_requests.mrp_eco_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.mrp_production_view_form
+msgid "Material Request"
+msgstr "طلب المادة"
+
+#. module: material_requests
+#: model:res.groups,name:material_requests.group_material_request_approver
+msgid "Material Request Approver"
+msgstr "الموافق على طلب المادة"
+
+#. module: material_requests
+#: model:res.groups,name:material_requests.group_material_request_implementer
+msgid "Material Request Implementer"
+msgstr "المنفذ لطلب المادة"
+
+#. module: material_requests
+#: model:ir.actions.act_window,name:material_requests.material_request_window_action
+#: model:ir.model.fields,field_description:material_requests.field_purchase_order__material_request_ids
+#: model:ir.ui.menu,name:material_requests.stock_menu_material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.purchase_order_view_form
+msgid "Material Requests"
+msgstr "طلبات المواد"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ رسالة التسليم"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "موعد نشاطي"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: material_requests
+#. odoo-python
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#: model:mrp.eco.stage,name:material_requests.eco_stage_new
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "موعد النشاط التالي"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__action__none
+msgid "None"
+msgstr "لا شيء"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__note
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي بها خطأ في التسليم"
+
+#. module: material_requests
+#: model:ir.actions.server,name:material_requests.action_order_all
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Order"
+msgstr "طلب"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__ordered
+msgid "Ordered"
+msgstr "قيد الطلب"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__pending
+msgid "Pending"
+msgstr "معلق"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__product_id
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_search
+msgid "Product"
+msgstr "المنتج"
+
+#. module: material_requests
+#: model:mrp.eco.type,name:material_requests.eco_type_design
+msgid "Product Design"
+msgstr "تصميم منتج"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__design_eco_id
+msgid "Product ECO"
+msgstr "أمر التغيير الهندسي للمنتج"
+
+#. module: material_requests
+#: model:ir.model,name:material_requests.model_mrp_production
+msgid "Production Order"
+msgstr "أمر الإنتاج"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__action__purchase
+msgid "Purchase"
+msgstr "شراء"
+
+#. module: material_requests
+#: model:ir.model,name:material_requests.model_purchase_order
+#: model:ir.model.fields,field_description:material_requests.field_material_request__purchase_order_id
+msgid "Purchase Order"
+msgstr "أمر شراء"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__product_qty
+msgid "Quantity"
+msgstr "الكمية"
+
+#. module: material_requests
+#: model:mrp.eco.stage,legend_done:material_requests.eco_stage_canceled
+#: model:mrp.eco.stage,legend_done:material_requests.eco_stage_design
+#: model:mrp.eco.stage,legend_done:material_requests.eco_stage_done
+#: model:mrp.eco.stage,legend_done:material_requests.eco_stage_new
+#: model:mrp.eco.stage,legend_done:material_requests.eco_stage_validated
+msgid "Ready"
+msgstr "جاهز"
+
+#. module: material_requests
+#: model:res.groups,name:material_requests.group_material_request_design_person
+msgid "Receive design order notification"
+msgstr "استلام إشعار طلب التصميم"
+
+#. module: material_requests
+#: model:res.groups,name:material_requests.group_material_request_manufacturing_person
+msgid "Receive manufacturing order notification"
+msgstr "استلام إشعار طلب التصنيع"
+
+#. module: material_requests
+#: model:res.groups,name:material_requests.group_material_request_purchase_person
+msgid "Receive purchase order notification"
+msgstr "استلام إشعار طلب الشراء"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: material_requests
+#: model:ir.model.fields.selection,name:material_requests.selection__material_request__state__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Related ECO"
+msgstr "أمر التغيير الهندسي"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Related Order"
+msgstr "الطلب"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__date_request
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+msgid "Request Name"
+msgstr "اسم الطلب"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_tree
+msgid "Reset"
+msgstr "إعادة التعيين"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ رسالة ال SMS الخاصة بالتسليم"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__state
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_search
+msgid "Status"
+msgstr "الحالة"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بلإعتماد على النشاط\n"
+"متأخر: تاريخ الاستحقاق قد مر بالفعل\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: material_requests
+#. odoo-python
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#, python-format
+msgid ""
+"The request [ %s ] doesn't have Quantity for order, Please Reset a Request "
+"and pass positive quantity."
+msgstr "الطلب [ %s ] لا يحتوي على كمية للطلب، يرجى إعادة تعيين الطلب وإدخال كمية موجبة."
+
+#. module: material_requests
+#. odoo-python
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#, python-format
+msgid ""
+"The request [ %s ] doesn't have Vendor for order, Please enter a Vendor."
+msgstr "الطلب [ %s ] ليس لديه بائع للطلب، يرجى إدخال بائع."
+
+#. module: material_requests
+#. odoo-python
+#: code:addons/addons/material_requests/models/material_request.py:0
+#: code:addons/material_requests/models/material_request.py:0
+#, python-format
+msgid ""
+"The request [ %s ] doesn't have action, Please select a suitable action."
+msgstr "الطلب [ %s ] ليس له إجراء، يرجى تحديد إجراء مناسب."
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: material_requests
+#: model:ir.module.category,name:material_requests.material_request_management
+msgid "User access level for Overtime module \"Material Request\""
+msgstr "مستوى وصول المستخدم لوحدة العمل الإضافية 'طلب المواد'"
+
+#. module: material_requests
+#: model:mrp.eco.stage,name:material_requests.eco_stage_validated
+msgid "Validated"
+msgstr "تم التصديق "
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__vendor_id
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_search
+msgid "Vendor"
+msgstr "المورد"
+
+#. module: material_requests
+#: model:ir.model.fields,field_description:material_requests.field_material_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الإلكتروني"
+
+#. module: material_requests
+#: model:ir.model.fields,help:material_requests.field_material_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل الإتصال في الموقع الإلكتروني"
+
+#. module: material_requests
+#: model_terms:ir.ui.view,arch_db:material_requests.material_request_view_form
+msgid "mm/dd/yyyy"
+msgstr "الشهر/اليوم/السنة"

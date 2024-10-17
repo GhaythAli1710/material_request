@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <menuitem id="stock_menu_material_request"
+                  name="Material Request"
+                  parent="stock.menu_stock_procurement"
+                  groups="stock.group_stock_manager,material_request.group_material_request_implementer,material_request.group_material_request_approver"
+                  sequence="5"
+                  action="material_request.material_request_window_action"/>
+    </data>
+</odoo>

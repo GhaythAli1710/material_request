@@ -1,0 +1,199 @@
+<odoo>
+    <data>
+        <record id="material_request_view_tree" model="ir.ui.view">
+            <field name="name">material.request.view.tree</field>
+            <field name="model">material.request</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom"
+                      sample="1"
+                      multi_edit="1"
+                      export_xlsx="0">
+                    <field name="state" column_invisible="True"/>
+                    <field name="purchase_order_id" column_invisible="True"/>
+                    <field name="manufacturing_order_id" column_invisible="True"/>
+                    <field name="design_eco_id" column_invisible="True"/>
+                    <field name="name"/>
+                    <field name="user_id" optional="hidden"/>
+                    <field name="date_request" optional="hidden"/>
+                    <field name="product_id" readonly="state != 'draft'" options="{'no_create': True}"/>
+                    <field name="product_qty" readonly="state not in ['draft','pending']"/>
+                    <field name="note" readonly="state not in ['draft','pending']"/>
+                    <field name="vendor_id" readonly="state !='approved' or action != 'purchase'"
+                           groups="material_request.group_material_request_implementer" options="{'no_create': True}"/>
+                    <field name="action" readonly="state != 'approved'"
+                           groups="material_request.group_material_request_implementer"/>
+                    <field name="state" widget="badge"
+                           decoration-muted="state == 'draft'"
+                           decoration-warning="state == 'pending'"
+                           decoration-success="state == 'approved'"
+                           decoration-primary="state == 'ordered'"
+                           decoration-info="state == 'done'"
+                           decoration-danger="state == 'refused'"
+                           decoration-bf="state in ['pending','approved','ordered','done','refused']"
+                           decoration-it="state == 'draft'"/>
+                    <button name="action_confirm" string="Confirm" type="object" invisible="state != 'draft'"/>
+                    <button name="action_approve" string="Approve" type="object"
+                            groups="material_request.group_material_request_approver"
+                            invisible="state != 'pending'"/>
+                    <button name="action_order" string="Order" type="object"
+                            groups="material_request.group_material_request_implementer"
+                            invisible="state != 'approved'" class="o_replenish_buttons" icon="fa-truck"/>
+                    <button name="action_done" string="Done" type="object"
+                            groups="material_request.group_material_request_implementer"
+                            invisible="state != 'ordered'"/>
+                    <button name="action_view_related_order" string="Related Order" type="object"
+                            invisible="not purchase_order_id and not manufacturing_order_id"/>
+                    <button name="action_view_related_eco" string="Related ECO" type="object"
+                            invisible="not design_eco_id"/>
+                    <button name="action_refuse" string="Refuse" type="object"
+                            groups="material_request.group_material_request_approver"
+                            invisible="state in ['ordered','done','refused']"/>
+                    <button name="action_reset" string="Reset" type="object"
+                            groups="material_request.group_material_request_approver"
+                            invisible="state != 'refused'"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="material_request_view_search" model="ir.ui.view">
+            <field name="name">material.request.view.search</field>
+            <field name="model">material.request</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="date_request"/>
+                    <field name="product_id"/>
+                    <field name="vendor_id"/>
+                    <field name="action"/>
+                    <field name="state"/>
+                    <group name="Request" string="Group By" expand="0">
+                        <filter string="Action" name="groupby_action" domain="[]"
+                                context="{'group_by': 'action'}"
+                                groups="material_request.group_material_request_implementer"/>
+                        <filter string="Product" name="groupby_product" domain="[]"
+                                context="{'group_by': 'product_id'}"
+                                groups="material_request.group_material_request_implementer"/>
+                        <filter string="Vendor" name="groupby_vendor" domain="[]"
+                                context="{'group_by': 'vendor_id'}"
+                                groups="material_request.group_material_request_implementer"/>
+                        <separator/>
+                    </group>
+                    <searchpanel>
+                        <field name="action" string="Action" enable_counters="1"/>
+                        <field name="state" string="Status" enable_counters="1"/>
+                    </searchpanel>
+                </search>
+            </field>
+        </record>
+
+        <record id="material_request_view_form" model="ir.ui.view">
+            <field name="name">material.request.view.form</field>
+            <field name="model">material.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,pending,approved,ordered,done"/>
+                        <button name="action_confirm" string="Confirm" type="object" invisible="state != 'draft'"
+                                class="oe_highlight"/>
+                        <button name="action_approve" string="Approve" type="object"
+                                groups="material_request.group_material_request_approver"
+                                invisible="state != 'pending'" class="oe_highlight"/>
+                        <button name="action_order" string="Order" type="object"
+                                groups="material_request.group_material_request_implementer"
+                                invisible="state != 'approved'" class="oe_highlight"/>
+                        <button name="action_done" string="Done" type="object"
+                                groups="material_request.group_material_request_implementer"
+                                invisible="state != 'ordered'" class="oe_highlight"/>
+                        <button name="action_refuse" string="Refuse" type="object"
+                                groups="material_request.group_material_request_approver"
+                                invisible="state in ['ordered','done','refused']"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box" name="button_box">
+                            <button name="action_view_related_order" string="Order" type="object"
+                                    invisible="not purchase_order_id and not manufacturing_order_id"
+                                    class="oe_stat_button" icon="fa-truck">
+                            </button>
+                            <button name="action_view_related_eco" string="ECO" type="object"
+                                    invisible="not design_eco_id"
+                                    class="oe_stat_button" icon="fa-cogs">
+                            </button>
+                        </div>
+                        <h1>
+                            <field name="name" placeholder="Request Name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                                <field name="product_id" readonly="state != 'draft'" options="{'no_create': True}"/>
+                                <field name="product_qty" readonly="state not in ['draft','pending']"/>
+                            </group>
+                            <group>
+                                <field name="date_request" placeholder="mm/dd/yyyy"/>
+                                <field name="vendor_id" readonly="state !='approved' or action != 'purchase'"
+                                       groups="material_request.group_material_request_implementer"
+                                       invisible="action != 'purchase'" options="{'no_create': True}"/>
+                                <field name="action" readonly="state !='approved'"
+                                       groups="material_request.group_material_request_implementer"/>
+                                <field name="purchase_order_id" invisible="True"/>
+                                <field name="manufacturing_order_id" invisible="True"/>
+                                <field name="design_eco_id" invisible="True"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Note">
+                                <field name="note" readonly="state not in ['draft','pending']"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="material_request_window_action" model="ir.actions.act_window">
+            <field name="name">Material Requests</field>
+            <field name="res_model">material.request</field>
+            <field name="view_mode">tree,search</field>
+        </record>
+
+        <record id="action_confirm_all" model="ir.actions.server">
+            <field name="name">Confirm</field>
+            <field name="model_id" ref="material_request.model_material_request"/>
+            <field name="binding_model_id" ref="material_request.model_material_request"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_confirm()</field>
+        </record>
+
+        <record id="action_approve_all" model="ir.actions.server">
+            <field name="name">Approve</field>
+            <field name="model_id" ref="material_request.model_material_request"/>
+            <field name="binding_model_id" ref="material_request.model_material_request"/>
+            <field name="groups_id" eval="[(4, ref('material_request.group_material_request_approver'))]"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_approve()</field>
+        </record>
+
+        <record id="action_order_all" model="ir.actions.server">
+            <field name="name">Order</field>
+            <field name="model_id" ref="material_request.model_material_request"/>
+            <field name="binding_model_id" ref="material_request.model_material_request"/>
+            <field name="groups_id" eval="[(4, ref('material_request.group_material_request_implementer'))]"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_order()</field>
+        </record>
+
+        <record id="action_done_all" model="ir.actions.server">
+            <field name="name">Done</field>
+            <field name="model_id" ref="material_request.model_material_request"/>
+            <field name="binding_model_id" ref="material_request.model_material_request"/>
+            <field name="groups_id" eval="[(4, ref('material_request.group_material_request_implementer'))]"/>
+            <field name="binding_view_types">list</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_done()</field>
+        </record>
+    </data>
+</odoo>

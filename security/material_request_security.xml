@@ -1,0 +1,34 @@
+<odoo>
+    <data noupdate="0">
+        <record id="material_request_management" model="ir.module.category">
+            <field name="name">Material Request</field>
+            <field name="description">Category For Material Request</field>
+            <field name="sequence">0</field>
+        </record>
+
+        <record id="group_material_request_approver" model="res.groups">
+            <field name="name">Material Request Approver</field>
+            <field name="category_id" ref="material_request_management"/>
+        </record>
+
+        <record id="group_material_request_implementer" model="res.groups">
+            <field name="name">Material Request Implementer</field>
+            <field name="category_id" ref="material_request_management"/>
+        </record>
+
+        <record id="group_material_request_purchase_person" model="res.groups">
+            <field name="name">Receive purchase order notification</field>
+            <field name="category_id" ref="material_request_management"/>
+        </record>
+
+        <record id="group_material_request_manufacturing_person" model="res.groups">
+            <field name="name">Receive manufacturing order notification</field>
+            <field name="category_id" ref="material_request_management"/>
+        </record>
+
+        <record id="group_material_request_design_person" model="res.groups">
+            <field name="name">Receive design order notification</field>
+            <field name="category_id" ref="material_request_management"/>
+        </record>
+    </data>
+</odoo>
